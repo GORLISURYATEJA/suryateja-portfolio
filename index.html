@@ -5,7 +5,10 @@
     <title>Surya Teja | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,46 +24,49 @@
         </nav>
     </header>
 
+
     <!-- HERO -->
     <section id="home" class="section hero">
-    <div class="hero-container">
+        <div class="hero-container">
 
-        <div class="hero-left">
-            <h1>I’m Surya Teja</h1>
-            <h2>Full-Stack Web Developer & System Builder</h2>
-            <p>
-                I design structured backend systems and modern interfaces
-                focused on clarity, scalability and performance.
-            </p>
-            <a href="#projects" class="btn-primary">View Projects</a>
-        </div>
-
-        <div class="hero-right">
-            <div class="profile-wrapper">
-                <img src="profile.jpg" alt="Profile">
+            <div class="hero-left">
+                <h1>I’m Surya Teja</h1>
+                <h2>Full-Stack Web Developer & System Builder</h2>
+                <p>
+                    I design structured backend systems and modern interfaces
+                    focused on clarity, scalability and performance.
+                </p>
+                <a href="#projects" class="btn-primary">View Projects</a>
             </div>
-        </div>
 
-    </div>
-</section>
+            <div class="hero-right">
+                <div class="profile-wrapper">
+                    <img src="profile.jpg" alt="Profile Photo">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 
     <!-- ABOUT -->
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
         <div class="content">
             <h1>About Me</h1>
             <p>
-                B.Tech student at SRM University passionate about
-                building structured digital systems. Recently developed
-                a Jewellery Inventory & Sales Management System with
-                payment workflow, HUID validation and admin analytics.
+                B.Tech student at SRM University passionate about building structured digital systems.
+                Recently developed a Jewellery Inventory & Sales Management System with complete
+                payment workflow, HUID validation logic, admin analytics dashboard and structured order management.
             </p>
         </div>
     </section>
 
+
     <!-- SKILLS -->
-    <section id="skills" class="section">
+    <section id="skills" class="section reveal">
         <div class="content">
             <h1>Skills</h1>
+
             <div class="skills">
                 <div>HTML</div>
                 <div>CSS</div>
@@ -69,33 +75,64 @@
                 <div>MySQL</div>
                 <div>Git & GitHub</div>
             </div>
+
         </div>
     </section>
+
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <section id="projects" class="section reveal">
         <div class="content">
             <h1>Projects</h1>
-            <p>
-                Jewellery Inventory & Sales Management System  
-                Full-stack web application with admin dashboard,
-                HUID validation logic, EMI & QR workflow and stock automation.
-            </p>
-            <a href="https://github.com/GORLISURYATEJA" target="_blank" class="btn">
-                View on GitHub
-            </a>
+
+            <div class="project-card">
+                <h3>Jewellery Inventory & Sales Management System</h3>
+                <p>
+                    Full-stack web application featuring admin dashboard,
+                    HUID validation system, EMI & QR payment workflow,
+                    stock automation and structured order management.
+                </p>
+
+                <a href="https://github.com/GORLISURYATEJA" 
+                   target="_blank" 
+                   class="btn-primary">
+                    View on GitHub
+                </a>
+            </div>
+
         </div>
     </section>
 
+
     <!-- CONTACT -->
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
         <div class="content">
             <h1>Contact</h1>
             <p>Email: suryatejagorli12@gmail.com</p>
-            <p>GitHub: GORLISURYATEJA</p>
+            <p>
+                GitHub: 
+                <a href="https://github.com/GORLISURYATEJA" target="_blank">
+                    GORLISURYATEJA
+                </a>
+            </p>
         </div>
     </section>
 
+
+    <!-- SCROLL REVEAL SCRIPT -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
 </body>
 </html>
-
