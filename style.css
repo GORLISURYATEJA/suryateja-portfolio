@@ -5,21 +5,33 @@ html {
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #0e1117;
-    color: #ffffff;
+    background: #f5f3ff;
+    color: #111827;
     overflow-x: hidden;
 }
 
-/* SUBTLE SPOTLIGHT GLOW */
-body::before {
+/* Soft Floating Gradient Background Shapes */
+body::before,
+body::after {
     content: "";
     position: fixed;
-    top: -200px;
-    left: -200px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0,153,255,0.15), transparent 70%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
     z-index: -1;
+    filter: blur(120px);
+}
+
+body::before {
+    top: -150px;
+    left: -150px;
+    background: rgba(139, 92, 246, 0.4);
+}
+
+body::after {
+    bottom: -150px;
+    right: -150px;
+    background: rgba(59, 130, 246, 0.4);
 }
 
 /* NAVBAR */
@@ -28,8 +40,8 @@ body::before {
     width: 100%;
     top: 0;
     padding: 20px 0;
-    background: rgba(14,17,23,0.6);
-    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(12px);
     text-align: center;
     z-index: 1000;
 }
@@ -37,13 +49,13 @@ body::before {
 .navbar a {
     margin: 0 25px;
     text-decoration: none;
-    color: #9ca3af;
+    color: #374151;
     font-weight: 500;
     transition: 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #00c6ff;
+    color: #7c3aed;
 }
 
 /* SECTION */
@@ -52,78 +64,53 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    text-align: center;
 }
 
-/* HERO SPLIT */
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    max-width: 1200px;
+/* HERO */
+.hero h1 {
+    font-size: 64px;
+    margin-bottom: 10px;
 }
 
-.hero-left {
-    max-width: 600px;
-}
-
-.hero-left h1 {
-    font-size: 58px;
-    margin-bottom: 15px;
-}
-
-.hero-left h2 {
-    font-size: 26px;
-    color: #00c6ff;
+.hero h2 {
+    font-size: 28px;
+    background: linear-gradient(90deg, #7c3aed, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 25px;
 }
 
-.hero-left p {
-    color: #9ca3af;
+.hero p {
+    color: #4b5563;
+    max-width: 700px;
+    margin: auto;
     line-height: 1.7;
 }
 
-/* BUTTON PREMIUM */
+/* PREMIUM BUTTON */
 .btn-primary {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 15px 45px;
     border-radius: 50px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: #ffffff;
+    background: linear-gradient(90deg, #7c3aed, #3b82f6);
+    color: white;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s ease;
 }
 
 .btn-primary:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,114,255,0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(124, 58, 237, 0.4);
 }
 
-/* PROFILE IMAGE */
-.profile-wrapper {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    padding: 5px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    animation: float 4s ease-in-out infinite;
-}
-
-.profile-wrapper img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* FLOAT ANIMATION */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+/* SECTION HEADINGS */
+.section h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
 }
 
 /* SKILLS */
@@ -135,14 +122,14 @@ body::before {
 }
 
 .skills div {
-    padding: 15px 30px;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 35px;
+    border-radius: 40px;
+    background: white;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
     transition: 0.3s ease;
 }
 
 .skills div:hover {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    transform: translateY(-6px);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(124, 58, 237, 0.25);
 }
