@@ -1,0 +1,137 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5EBDD;
+    color: #2C2C2C;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.alt {
+    background-color: #EFE2D1;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #EFE2D1;
+    position: sticky;
+    top: 0;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2C2C2C;
+    font-weight: 500;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #A47551;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8d5f3d;
+}
+
+.btn.small {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #A47551;
+    color: #A47551;
+}
+
+.btn.outline:hover {
+    background-color: #A47551;
+    color: white;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* PROJECTS */
+.project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #EFE2D1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 60px 10%;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
