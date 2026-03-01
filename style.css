@@ -6,7 +6,10 @@ html {
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #0b0f19; /* Deep professional dark */
+    background:
+        radial-gradient(circle at 20% 20%, rgba(99,102,241,0.15), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(59,130,246,0.12), transparent 40%),
+        #0b0f19;
     color: #e5e7eb;
 }
 
@@ -16,9 +19,9 @@ body {
     top: 0;
     width: 100%;
     padding: 18px 0;
-    background: rgba(11,15,25,0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(11,15,25,0.75);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
     text-align: center;
     z-index: 1000;
 }
@@ -28,6 +31,7 @@ body {
     text-decoration: none;
     color: #9ca3af;
     font-weight: 500;
+    letter-spacing: 0.5px;
     transition: 0.3s ease;
 }
 
@@ -46,7 +50,7 @@ body {
 }
 
 .section-alt {
-    background: #111827; /* Slightly lighter for separation */
+    background: #111827;
 }
 
 .content {
@@ -69,17 +73,20 @@ body {
 }
 
 .hero h1 {
-    font-size: 56px;
+    font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
     color: #ffffff;
+    text-shadow: 0 0 30px rgba(99,102,241,0.35);
 }
 
 .hero h2 {
     font-size: 22px;
     font-weight: 500;
-    color: #a5b4fc; /* subtle accent */
     margin-bottom: 20px;
+    background: linear-gradient(90deg, #6366f1, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -89,12 +96,19 @@ body {
 
 /* ================= PROFILE IMAGE ================= */
 .profile-wrapper {
-    width: 240px;
-    height: 240px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid rgba(255,255,255,0.08);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+    box-shadow:
+        0 0 40px rgba(99,102,241,0.25),
+        0 25px 60px rgba(0,0,0,0.6);
+    transition: 0.4s ease;
+}
+
+.profile-wrapper:hover {
+    transform: scale(1.05);
 }
 
 .profile-wrapper img {
@@ -107,9 +121,9 @@ body {
 .btn-primary {
     display: inline-block;
     margin-top: 30px;
-    padding: 14px 36px;
-    border-radius: 6px;
-    background: #6366f1;
+    padding: 14px 40px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #6366f1, #3b82f6);
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -117,13 +131,13 @@ body {
 }
 
 .btn-primary:hover {
-    background: #4f46e5;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(99,102,241,0.5);
 }
 
 /* ================= HEADINGS ================= */
 .section h1 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 30px;
     color: #ffffff;
 }
@@ -134,39 +148,44 @@ body {
     line-height: 1.8;
 }
 
-/* ================= SKILLS GRID ================= */
+/* ================= SKILLS ================= */
 .skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .skills div {
-    padding: 14px;
-    border-radius: 6px;
-    background: #1f2937;
-    border: 1px solid rgba(255,255,255,0.05);
+    padding: 14px 30px;
+    border-radius: 40px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
     transition: 0.3s ease;
 }
 
 .skills div:hover {
     border-color: #6366f1;
-    background: #1a2235;
+    box-shadow: 0 0 25px rgba(99,102,241,0.4);
+    transform: translateY(-4px);
 }
 
 /* ================= PROJECT CARD ================= */
 .project-card {
-    background: #1f2937;
+    background: rgba(255,255,255,0.04);
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
     transition: 0.3s ease;
 }
 
 .project-card:hover {
     border-color: #6366f1;
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(99,102,241,0.3);
 }
 
 /* ================= SCROLL REVEAL ================= */
@@ -179,4 +198,16 @@ body {
 .reveal.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left {
+        text-align: center;
+    }
 }
