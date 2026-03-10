@@ -199,3 +199,10 @@ body {
         text-align: center;
     }
 }
+
+.hero-image img{
+width:300px;
+height:300px;
+border-radius:50%;
+object-fit:cover;
+}
