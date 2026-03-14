@@ -7,7 +7,7 @@ It showcases my skills, projects, and contact information.
 ![Portfolio Screenshot](portfolio-preview.png)
 
 ## 🌐 Live Website
-https://gorlisuryateja.github.io/suryateja-portfolio/
+https://suryatejagorli.github.io/suryateja-portfolio/
 
 ## 📌 Features
 - Responsive portfolio design
